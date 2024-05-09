@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --color-turquoise: #29524A;
+    --color-vert: #5F7A69;
+    --color-olive: #94A187;
+    --color-black: #06070E;
+}
+
+body {
+    display: flex;
+    flex-flow: wrap column;
+    gap: 25px;
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+}
+
+.image img {
+    max-width: 100px;
+}
+
+.text--desktop {
+    display: none;
+}
+
+.constellation {
+    background-color: #06070E;
+    color: white;
+    width: fit-content;
+    height: fit-content;
+    padding: 50px;
+}
+
+@media screen and (min-width: 1024px) {
+    .text--mobile {
+        display: none;
+    }
+
+    .text--desktop {
+        display: block;
+    }
+    
+    .container {
+        flex-direction: row;
+    }
+}
