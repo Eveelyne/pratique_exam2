@@ -1,50 +1,135 @@
-class Star {
-    constructor(name, age, color, galaxy, distance) {
-    this.name = name;
-    this.age = age;
-    this.color = color;
-    this.galaxie = galaxy;
-    this.distance = distance;
+class Keyboard {
+    constructor(
+        name,
+        brand,
+        compatibleDevices,
+        connectivityTechnology,
+        keyboardDescription,
+        specialFeature,
+        colour,
+        numberOfKeys,
+        style,
+        productDimensions,
+        material
+    ) {
+        this.name = name;
+        this.brand = brand;
+        this.compatibleDevices = compatibleDevices;
+        this.connectivityTechnology = connectivityTechnology;
+        this.keyboardDescription = keyboardDescription;
+        this.specialFeature = specialFeature;
+        this.colour = colour;
+        this.numberOfKeys = numberOfKeys;
+        this.style = style;
+        this.productDimensions = productDimensions;
+        this.material = material;
     }
 
     toHtml() {
         const div = document.createElement('div');
-        div.classList.add('constellation');
+        div.classList.add('container__keyboards');
 
         const ul = document.createElement('ul');
         const nameHtml = document.createElement('li');
-        const ageHtml = document.createElement('li');
-        const colorHtml = document.createElement('li');
-        const galaxieHtml = document.createElement('li');
-        const distanceHtml = document.createElement('li');
+        const brandHtml = document.createElement('li');
+        const compatibleDevicesHtml = document.createElement('li');
+        const connectivityTechnologyHtml = document.createElement('li');
+        const keyboardDescriptionHtml = document.createElement('li');
+        const specialFeatureHtml = document.createElement('li');
+        const colourHtml = document.createElement('li');
+        const numberOfKeysHtml = document.createElement('li');
+        const styleHtml = document.createElement('li');
+        const productDimensionsHtml = document.createElement('li');
+        const materialHtml = document.createElement('li');
 
+        ul.textContent = "Liste des features des keyboards :"
         nameHtml.textContent = this.name;
-        ageHtml.textContent = this.age;
-        colorHtml.textContent = this.color;
-        galaxieHtml.textContent = this.galaxie;
-        distanceHtml.textContent = this.distance;
-
+        brandHtml.textContent = this.brand;
+        compatibleDevicesHtml.textContent = this.compatibleDevices;
+        connectivityTechnologyHtml.textContent = this.connectivityTechnology;
+        keyboardDescriptionHtml.textContent = this.keyboardDescription;
+        specialFeatureHtml.textContent = this.specialFeature;
+        colourHtml.textContent = this.colour;
+        numberOfKeysHtml.textContent = this.numberOfKeys;
+        styleHtml.textContent = this.style;
+        productDimensionsHtml.textContent = this.productDimensions;
+        materialHtml.textContent = this.material;
+        
         div.appendChild(ul);
         ul.appendChild(nameHtml);
-        ul.appendChild(ageHtml);
-        ul.appendChild(colorHtml);
-        ul.appendChild(galaxieHtml);
-        ul.appendChild(distanceHtml);
+        ul.appendChild(brandHtml);
+        ul.appendChild(compatibleDevicesHtml);
+        ul.appendChild(connectivityTechnologyHtml);
+        ul.appendChild(keyboardDescriptionHtml);
+        ul.appendChild(specialFeatureHtml);
+        ul.appendChild(colourHtml);
+        ul.appendChild(numberOfKeysHtml);
+        ul.appendChild(numberOfKeysHtml);
+        ul.appendChild(productDimensionsHtml);
+        ul.appendChild(materialHtml);
 
         return div;
     }
 }
 
-const stars = [
-    new Star("45IR1", 690000, "#F4F6F4", "Andromeda", 100054),
-    new Star("45IR2", 680000, "#F4F5F4", "Andromeda", 100353),
-    new Star("45IR3", 670000, "#F4F4F4", "Andromeda", 100454),
-    new Star("45IR4", 660000, "#F4F3F4", "Andromeda", 100554),
-    new Star("45IR5", 650000, "#F4F2F4", "Andromeda", 100654),
-    new Star("45IR6", 640000, "#F4F1F4", "Andromeda", 100754),
-    new Star("45IR7", 630000, "#F4F0F4", "Andromeda", 100854),
+    const keyboards = [
+    new Keyboard(
+    "Magic-Refiner",
+    "MAGIC-REFINER",
+    "Smartphone",
+    "Bluetooth",
+    "Mechanical",
+    "Ergonomic",
+    "Off-white & Orange/Red Switch",
+    68,
+    "Modern",
+    "31.2L x 10.2W x 4.3H Centimetres",
+    "Polycarbonate"
+    ),
+
+    new Keyboard(
+    "Magic-Refiner",
+    "MAGIC-REFINER",
+    "Smartphone",
+    "Bluetooth",
+    "Mechanical",
+    "Ergonomic",
+    "Off-white & Orange/Red Switch",
+    68,
+    "Modern",
+    "31.2L x 10.2W x 4.3H Centimetres",
+    "Polycarbonate"
+    ),
+
+    new Keyboard(
+    "Magic-Refiner",
+    "MAGIC-REFINER",
+    "Smartphone",
+    "Bluetooth",
+    "Mechanical",
+    "Ergonomic",
+    "Off-white & Orange/Red Switch",
+    68,
+    "Modern",
+    "31.2L x 10.2W x 4.3H Centimetres",
+    "Polycarbonate"
+    ),
+
+    new Keyboard(
+    "Magic-Refiner",
+    "MAGIC-REFINER",
+    "Smartphone",
+    "Bluetooth",
+    "Mechanical",
+    "Ergonomic",
+    "Off-white & Orange/Red Switch",
+    68,
+    "Modern",
+    "31.2L x 10.2W x 4.3H Centimetres",
+    "Polycarbonate"
+    ),
 ];
 
-stars.forEach((star) => {
-    document.body.appendChild(star.toHtml());
+keyboards.forEach(keyboard => {
+    document.body.appendChild(keyboard.toHtml());
 });
